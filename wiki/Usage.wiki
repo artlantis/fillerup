@@ -1,8 +1,6 @@
 #summary Usage for the fillerup plugin
 #labels Featured,Phase-Deploy
 
-= Usage =
-
 {{{
 $(column2).fillerup(options);
 }}}
