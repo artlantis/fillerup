@@ -44,12 +44,11 @@ Call a function repeatedly that uses AJAX to add content:
 
 {{{
 function addMoreContent(o) {
-  var e = $(this);
-  e.load('myurl.php', function(){ e.fillerup(o); });
 
-  // Important - when using ajax, return false to stop fillerup
-  // from immediately calling this function again.
+  var col = $(this);
+  col.load('myurl.php', function(){ col.fillerup(o); });
 
+  // Return false to stop from immediately calling the function again
   return false;
 }
 
