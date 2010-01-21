@@ -9,7 +9,7 @@ $(column2).fillerup(options);
 
 == Options ==
 
-*alignWith* (selector, jQuery object, or DOM element) The column that you are measuring against.
+*alignWith* (selector, jQuery object, or DOM element) The column (column1) that you are measuring against.
 
 *content* (single value, array of values, or a single function) The content to insert. Values are added using jQuery.append(), so they should be HTML strings or jQuery objects. See below for using a function.
 
@@ -21,7 +21,7 @@ $(column2).fillerup(options);
 
 When you use a function as your content, fillerup calls your function and passes a single options argument containing all the fillerup options above, plus one additional parameter:
 
-*diff* (int) The pixels available to be filled (the difference in height between 
+*diff* (int) The pixels available to be filled (the difference in height between column1 and column2).
 
 Also within your function, "this" is set to the element where you should add the content.
 
