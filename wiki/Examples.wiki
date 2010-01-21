@@ -28,13 +28,9 @@ $('#col2').fillerup({
 Call a function repeatedly to add content:
 
 {{{
-function addMoreContent(o) {
-  $(this).append('<p>Stuff to add</p>');
-}
-
 $('#col2').fillerup({
   alignWith:'#col1',
-  content:addMoreContent
+  content:function(){ $(this).append('<p>Stuff to add</p>'); }
 });
 }}}
 
@@ -43,7 +39,7 @@ $('#col2').fillerup({
 Call a function repeatedly that uses AJAX to add content:
 
 {{{
-function addMoreContent(o) {
+function addAJAXContent(o) {
 
   var col = $(this);
   col.load('myurl.php', function(){ col.fillerup(o); });
@@ -54,7 +50,7 @@ function addMoreContent(o) {
 
 $('#col2').fillerup({
   alignWith:'#col1',
-  content:addMoreContent
+  content:addAJAXContent
 });
 }}}
 
@@ -63,12 +59,9 @@ $('#col2').fillerup({
 Call a function repeatedly to reveal some content that is already hidden in column2:
 
 {{{
-function revealMoreContent(o) {
-  $(this).children(':hidden').eq(0).show();
-}
 
 $('#col2').fillerup({
   alignWith:'#col1',
-  content:revealMoreContent
+  content:function(){ $(this).children(':hidden').eq(0).show(); }
 });
 }}}
