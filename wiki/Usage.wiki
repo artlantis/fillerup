@@ -7,7 +7,7 @@ $(column2).fillerup(options);
 
 *column2* (selector) The column(s) where you want to insert more content.
 
-== Options ==
+== Option Parameters ==
 
 *alignWith* (selector, jQuery object, or DOM element) The column (column1) that you are measuring against.
 
@@ -19,10 +19,10 @@ $(column2).fillerup(options);
 
 ===content:fn(options)===
 
-When you use a function as your content, fillerup calls your function and passes a single options argument containing all the fillerup options above, plus one additional parameter:
+When you use a function as your content, fillerup calls your function and passes a single options argument containing all the fillerup options above, plus one additional options parameter:
 
 *diff* (int) The pixels available to be filled (the difference in height between column1 and column2).
 
-Also within your function, "this" is set to the element where you should add the content.
+Within your function the keyword "this" refers to the element where you should add the content.
 
 The function should return true to check the size and call the function again if necessary, or false to stop calling the function. When using ajax to asynchronously fetch content, the function should _always_ return false - then in your ajax callback you can call fillerup again (using the same options) to continue loading more content if necessary.
