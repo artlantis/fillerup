@@ -1,0 +1,30 @@
+#summary Usage for the fillerup plugin
+#labels Featured,Phase-Deploy
+
+= Usage =
+
+{{{
+$(column2).fillerup(options);
+}}}
+
+*column2* (selector, jQuery object, or DOM element) The column where you want to insert more content.
+
+== Options ==
+
+*alignWith* (selector, jQuery object, or DOM element) The column that you are measuring against.
+
+*content* (single value, array of values, or a single function) The content to insert. Values are added using jQuery.append(), so they should be HTML strings or jQuery objects. See below for content:fn().
+
+*max* (int) When using content:fn(), this is the maximum number of times to run the function.
+
+*padding* (int) Minimum difference between the height of column1 and column2. For example, for padding:100, if column1 is 100px taller than column2, then more content will be added. But if column1 is only 99px taller than column2, no additional content will be added.
+
+===content:fn(options)===
+
+When you use a function as your content, fillerup calls your function and passes a single options argument containing all the fillerup options above, plus one additional parameter:
+
+*diff* (int) The pixels available to be filled (the difference in height between 
+
+Also within your function, "this" is set to the element where you should add the content.
+
+The function should return true to check the size and call the function again if necessary, or false to stop calling the function. When using ajax to asynchronously fetch content, the function should _always_ return false - then in your ajax callback you can call fillerup again (using the same options) to continue loading more content if necessary.
