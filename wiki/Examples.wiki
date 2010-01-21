@@ -3,7 +3,7 @@
 
 =Add some HTML=
 
-Add a single piece of content:
+Add a single piece of content if there is 1px of space:
 
 {{{
 $('#col2').fillerup({
@@ -14,18 +14,19 @@ $('#col2').fillerup({
 
 =Add an array of HTML=
 
-Add an array of content:
+Add an array of content, one element at a time while there is 100px of space:
 
 {{{
 $('#col2').fillerup({
   alignWith:'#col1',
+  padding:100,
   content:['<p>Stuff to add</p>','<div><img src="myimg.jpg"/>More stuff</div>']
 });
 }}}
 
 =Call a function that adds content=
 
-Call a function repeatedly to add content:
+Call a function repeatedly to add content while there is 1px of space:
 
 {{{
 $('#col2').fillerup({
@@ -36,7 +37,7 @@ $('#col2').fillerup({
 
 =Call a function that adds content using AJAX=
 
-Call a function repeatedly that uses AJAX to add content:
+Call a function repeatedly that uses AJAX to add content while there is 1px of space:
 
 {{{
 function addAJAXContent(o) {
@@ -50,13 +51,20 @@ function addAJAXContent(o) {
 
 $('#col2').fillerup({
   alignWith:'#col1',
-  content:addAJAXContent
+  content:function(){
+
+    var col = $(this);
+    col.load('myurl.php', function(){ col.fillerup(o); });
+
+    // Return false to stop from immediately calling the function again
+    return false;
+  }
 });
 }}}
 
 =Call a function that reveals hidden content=
 
-Call a function repeatedly to reveal some content that is already hidden in column2:
+Call a function repeatedly to reveal some content that is already hidden in column2, while there is 1px of space:
 
 {{{
 
