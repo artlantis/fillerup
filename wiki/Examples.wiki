@@ -23,7 +23,7 @@ $('#col2').fillerup({
 });
 }}}
 
-=Call a function=
+=Call a function that adds content=
 
 Call a function repeatedly to add content:
 
@@ -38,7 +38,7 @@ $('#col2').fillerup({
 });
 }}}
 
-=Call a function that uses AJAX=
+=Call a function that adds content using AJAX=
 
 Call a function repeatedly that uses AJAX to add content:
 
@@ -55,5 +55,20 @@ function addMoreContent(o) {
 $('#col2').fillerup({
   alignWith:'#col1',
   content:addMoreContent
+});
+}}}
+
+=Call a function that reveals hidden content=
+
+Call a function repeatedly to reveal some content that is already hidden in column2:
+
+{{{
+function revealMoreContent(o) {
+  $(this).children(':hidden').eq(0).show();
+}
+
+$('#col2').fillerup({
+  alignWith:'#col1',
+  content:revealMoreContent
 });
 }}}
