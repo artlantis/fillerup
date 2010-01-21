@@ -25,7 +25,7 @@ $('#col2').fillerup({
 
 =Call a function=
 
-Call a function to add content:
+Call a function repeatedly to add content:
 
 {{{
 function addMoreContent(o) {
@@ -40,7 +40,7 @@ $('#col2').fillerup({
 
 =Call a function that uses AJAX=
 
-Call a function that uses to add content:
+Call a function repeatedly that uses AJAX to add content:
 
 {{{
 function addMoreContent(o) {
