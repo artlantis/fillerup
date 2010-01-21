@@ -1,0 +1,60 @@
+#summary Examples of calling the jQuery fillerup plugin
+#labels Featured,Phase-Deploy
+
+=Add some HTML=
+
+Add a single piece of content:
+
+{{{
+$('#col2').fillerup({
+  alignWith:'#col1',
+  content:'<p>Stuff to add</p>'
+});
+}}}
+
+=Add an array of HTML=
+
+Add an array of content:
+
+{{{
+$('#col2').fillerup({
+  alignWith:'#col1',
+  content:['<p>Stuff to add</p>','<div><img src="myimg.jpg"/>More stuff</div>']
+});
+}}}
+
+=Call a function=
+
+Call a function to add content:
+
+{{{
+function addMoreContent(o) {
+  $(this).append('<p>Stuff to add</p>');
+}
+
+$('#col2').fillerup({
+  alignWith:'#col1',
+  content:addMoreContent
+});
+}}}
+
+=Call a function that uses AJAX=
+
+Call a function that uses to add content:
+
+{{{
+function addMoreContent(o) {
+  var e = $(this);
+  e.load('myurl.php', function(){ e.fillerup(o); });
+
+  // Important - when using ajax, return false to stop fillerup
+  // from immediately calling this function again.
+
+  return false;
+}
+
+$('#col2').fillerup({
+  alignWith:'#col1',
+  content:addMoreContent
+});
+}}}
