@@ -5,13 +5,13 @@
 $(column2).fillerup(options);
 }}}
 
-*column2* (selector, jQuery object, or DOM element) The column where you want to insert more content.
+*column2* (selector) The column(s) where you want to insert more content.
 
 == Options ==
 
 *alignWith* (selector, jQuery object, or DOM element) The column that you are measuring against.
 
-*content* (single value, array of values, or a single function) The content to insert. Values are added using jQuery.append(), so they should be HTML strings or jQuery objects. See below for content:fn().
+*content* (single value, array of values, or a single function) The content to insert. Values are added using jQuery.append(), so they should be HTML strings or jQuery objects. See below for using a function.
 
 *max* (int) When using content:fn(), this is the maximum number of times to run the function.
 
