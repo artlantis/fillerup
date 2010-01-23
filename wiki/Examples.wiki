@@ -26,11 +26,12 @@ $('#col2').fillerup({
 
 =Call a function that adds content=
 
-Call a function repeatedly to add content while there is 1px of space:
+Call a function repeatedly (maximum of 10 times) to add content while there is 1px of space:
 
 {{{
 $('#col2').fillerup({
   alignWith:'#col1',
+  max:10,
   content:function(){ $(this).append('<p>Stuff to add</p>'); }
 });
 }}}
@@ -40,18 +41,9 @@ $('#col2').fillerup({
 Call a function repeatedly that uses AJAX to add content while there is 1px of space:
 
 {{{
-function addAJAXContent(o) {
-
-  var col = $(this);
-  col.load('myurl.php', function(){ col.fillerup(o); });
-
-  // Return false to stop from immediately calling the function again
-  return false;
-}
-
 $('#col2').fillerup({
   alignWith:'#col1',
-  content:function(){
+  content:function(o){
 
     var col = $(this);
     col.load('myurl.php', function(){ col.fillerup(o); });
@@ -70,6 +62,6 @@ Call a function repeatedly to reveal some content that is already hidden in colu
 
 $('#col2').fillerup({
   alignWith:'#col1',
-  content:function(){ $(this).children(':hidden').eq(0).show(); }
+  content:function(){ $(this).children(':hidden:first').show(); }
 });
 }}}
