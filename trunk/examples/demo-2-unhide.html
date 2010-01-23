@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Fillerup JQuery Plugin demo</title>
+    <link rel="stylesheet" href="demo.css"/>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="../src/jquery.fillerup.js"></script>
+    <script type="text/javascript">
+
+$(window).load(function(){
+        
+    $('div.col-2').fillerup({
+
+        alignWith: 'div.col-main',
+
+        content: function() {
+	    $(this).children(':hidden:first').show();
+	    return true;
+	}
+
+    });
+});
+
+    </script>
+  </head>
+  <body>
+
+    <h1>Demo: Hidden Content</h1>
+
+    <p><a href="index.html">&lt; Back to Fillerup</a></p>
+
+    <div>
+      <div class="col-main">
+
+	<p>This is the main column. Let's fill it up with a bunch of long text to stretch it out.</p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum commodo lorem. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu erat sed diam tincidunt luctus. Donec rutrum porta tellus. Morbi erat. Pellentesque sodales dignissim turpis. Nullam arcu tellus, laoreet non, sagittis ut, dictum sit amet, libero. Quisque pharetra ultrices nunc. Phasellus turpis lectus, convallis nec, placerat eu, facilisis in, libero. Suspendisse vel odio. Vestibulum consectetur tincidunt felis. In iaculis dolor ut lacus. Vestibulum pharetra luctus odio. Sed lacinia sapien quis risus. Fusce egestas metus vel mi. Aliquam ultrices justo quis est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nunc ligula, ultricies quis, adipiscing ut, aliquam at, nunc.</p>
+
+	<p>Aliquam erat volutpat. Integer pretium placerat nunc. Aliquam eget quam. Fusce congue scelerisque enim. Sed facilisis leo ut nulla. Aenean tristique nisi sit amet magna. Morbi et arcu. In consectetur venenatis purus. Etiam feugiat metus a augue. Pellentesque facilisis ligula eu est. Vivamus hendrerit. In lacinia tincidunt neque. Suspendisse interdum condimentum eros. Phasellus hendrerit imperdiet elit. Proin enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+
+	<p>Duis sapien magna, rhoncus id, sollicitudin et, scelerisque sed, tortor. Ut eget mi faucibus massa pretium aliquet. Integer sit amet lectus at eros tincidunt bibendum. Ut imperdiet arcu quis eros. Vivamus elementum urna et diam. Quisque facilisis aliquet libero. Cras quam massa, molestie eget, tempor et, aliquet suscipit, nulla. Sed sit amet dolor eget diam blandit congue. Praesent erat. Nullam tincidunt porta lorem.</p>
+
+	<p>Integer molestie. Praesent velit purus, rhoncus a, elementum ut, lobortis ut, diam. Nullam sit amet lorem. Cras ut dolor. In tincidunt, mi non molestie hendrerit, risus augue viverra nisi, nec gravida dui arcu sit amet ante. Curabitur tristique, turpis sed hendrerit aliquam, nisi felis adipiscing lectus, nec lacinia erat nulla eu mauris. Vestibulum rhoncus, ligula sed consequat tincidunt, tortor odio tincidunt sapien, id dictum enim ligula vitae erat. Donec venenatis dui in libero. Phasellus non nunc quis mauris elementum lobortis. Morbi purus erat, tempus at, iaculis at, egestas in, odio. Mauris tellus magna, commodo id, cursus sit amet, congue ut, enim. Suspendisse ante. In a enim. Cras aliquam accumsan augue. Suspendisse felis sapien, elementum a, accumsan non, porta at, quam. Praesent sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer rutrum orci eu erat.</p>
+
+	<p>Sed eu dolor sit amet nibh venenatis porttitor. Pellentesque malesuada. Aliquam rutrum neque a leo. Fusce libero arcu, pulvinar non, commodo et, consequat fermentum, nisi. Etiam a dolor posuere urna imperdiet rutrum. Nulla diam. Morbi metus libero, pellentesque faucibus, sodales nec, blandit et, augue. Aliquam vel sapien. Nullam eleifend tellus vitae diam. Quisque orci erat, ultricies nec, posuere sed, pretium id, eros. Morbi faucibus sapien. Maecenas nec leo et metus eleifend congue. Praesent ultricies accumsan nunc. Proin ultrices arcu vel magna. Mauris et elit at diam vehicula fringilla. Integer vitae nisl at mi fermentum congue. Etiam congue, nulla eleifend congue sollicitudin, augue odio tincidunt dolor, vel laoreet turpis tortor a magna. </p>
+
+      </div>
+      <div class="col-2">
+
+	<p>This is the second column. It has some initially hidden content, but fillerup will reveal the content one item at a time until the column is full.</p>
+
+        <div style="display:none">
+
+<!-- Start of Flickr Badge -->
+<style type="text/css">
+#flickr_badge_source_txt {padding:0; font: 11px Arial, Helvetica, Sans serif; color:#666666;}
+#flickr_badge_icon {display:block !important; margin:0 !important; border: 1px solid rgb(0, 0, 0) !important;}
+#flickr_icon_td {padding:0 5px 0 0 !important;}
+.flickr_badge_image {text-align:center !important;}
+.flickr_badge_image img {border: 1px solid black !important;}
+#flickr_badge_uber_wrapper {width:150px;}
+#flickr_www {display:block; text-align:center; padding:0 10px 0 10px !important; font: 11px Arial, Helvetica, Sans serif !important; color:#3993ff !important;}
+#flickr_badge_uber_wrapper a:hover,
+#flickr_badge_uber_wrapper a:link,
+#flickr_badge_uber_wrapper a:active,
+#flickr_badge_uber_wrapper a:visited {text-decoration:none !important; background:inherit !important;color:#3993ff;}
+#flickr_badge_wrapper {background-color:#ffffff;border: solid 1px #000000}
+#flickr_badge_source {padding:0 !important; font: 11px Arial, Helvetica, Sans serif !important; color:#666666 !important;}
+</style>
+<table id="flickr_badge_uber_wrapper" cellpadding="0" cellspacing="10" border="0"><tr><td><a href="http://www.flickr.com" id="flickr_www">www.<strong style="color:#3993ff">flick<span style="color:#ff1c92">r</span></strong>.com</a><table cellpadding="0" cellspacing="10" border="0" id="flickr_badge_wrapper">
+<script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?show_name=1&count=4&display=random&size=t&layout=v&source=user_set&user=43935390809%40N01&set=627942&context=in%2Fset-627942%2F"></script>
+<tr>
+<td id="flickr_badge_source" valign="center" align="center">
+<table cellpadding="0" cellspacing="0" border="0"><tr>
+<td width="10" id="flickr_icon_td"><a href="http://www.flickr.com/photos/barelyfitz/sets/627942/"><img id="flickr_badge_icon" alt="BarelyFitz's My Favorites photoset" src="http://farm1.static.flickr.com/1/buddyicons/43935390809@N01.jpg?1209793882#43935390809@N01" align="left" width="48" height="48"></a></td>
+<td id="flickr_badge_source_txt">BarelyFitz's <a href="http://www.flickr.com/photos/barelyfitz/sets/627942/">My Favorites</a> photoset</td>
+</tr></table>
+</td>
+</tr>
+</table>
+</td></tr></table>
+<!-- End of Flickr Badge -->
+
+        </div>
+
+        <div style="display:none">
+
+<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'search',
+  search: 'jquery',
+  interval: 6000,
+  title: 'jQuery Tweets',
+  subject: '',
+  width: 250,
+  height: 300,
+  theme: {
+    shell: {
+      background: '#8ec1da',
+      color: '#ffffff'
+    },
+    tweets: {
+      background: '#ffffff',
+      color: '#444444',
+      links: '#1985b5'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: true,
+    live: true,
+    hashtags: true,
+    timestamp: true,
+    avatars: true,
+    behavior: 'default'
+  }
+}).render().start();
+</script>
+<br/>
+
+        </div>
+
+        <div style="display:none">
+
+<object width="320" height="265"><param name="movie" value="http://www.youtube.com/v/dMH0bHeiRNg&hl=en_US&fs=1&"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/dMH0bHeiRNg&hl=en_US&fs=1&" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="320" height="265"></embed></object>
+
+        </div>
+
+        <div style="display:none">
+
+<script type="text/javascript">
+digg_id = 'digg-widget-container'; //make this id unique for each widget you put on a single page.
+</script>
+<script type="text/javascript" src="http://digg.com/tools/widgetjs"></script>
+<script type="text/javascript" src="http://digg.com/tools/services?type=javascript&amp;callback=diggwb&amp;endPoint=%2Fstories%2Fpopular&amp;count=10"></script>
+
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>
