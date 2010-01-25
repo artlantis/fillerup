@@ -25,7 +25,7 @@ When you use a function as your content, fillerup calls your function and passes
 
 Within your function the keyword "this" refers to the element where you should add the content.
 
-The function should return true to check the size and call the function again if necessary, or false to stop calling the function. When using ajax to asynchronously fetch content, the function should _always_ return false - then in your ajax callback you can call fillerup again (using the same options) to continue loading more content if necessary.
+If the function returns false, then fillerup will stop; otherwise, fillerup will check the columns and call the function again if necessary. When using ajax to asynchronously fetch content, the function should _always_ return false - then in your ajax callback you can call fillerup again (using the same options) to continue loading more content if necessary. Each time the function is called, the "max" option is decremented (to avoid getting caught in an infinite loop).
 
 =Changing the Defaults=
 
