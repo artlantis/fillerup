@@ -1,0 +1,21 @@
+body {
+   margin:0;
+   padding:1em;
+}
+
+.col-main {
+    border:1px solid black;
+    float:left;
+    margin:.25em;
+    padding:1em;
+    width:400px;
+    background-color:#eee;
+}
+.col-2 {
+    border:1px solid black;
+    float:left;
+    margin:.25em;
+    padding:1em;
+    width:200px;
+    background-color:#eee;
+}
