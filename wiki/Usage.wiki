@@ -27,7 +27,7 @@ Within your function the keyword "this" refers to the element where you should a
 
 The function should return true to check the size and call the function again if necessary, or false to stop calling the function. When using ajax to asynchronously fetch content, the function should _always_ return false - then in your ajax callback you can call fillerup again (using the same options) to continue loading more content if necessary.
 
-==Changing the Defaults==
+=Changing the Defaults=
 
 You can change the global defaults for all the options by modifying the jQuery.fn.fillerup.defaults object. For example:
 
