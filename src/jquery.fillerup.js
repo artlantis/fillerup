@@ -80,10 +80,8 @@
     };
 
     $.fn.fillerup.defaults = {
-	content: '', // content to add (passed to .append(), an array of same, or a function
-	alignWith: '#fillerupAlign', // align element
 	padding: 1, // only add new stuff if this many pixels are available
-	max:20 // max times fillerup can run if content is a function that returns true (to prevent infinite loops)
+	max:20      // max times fillerup can run if content is a function
     };
 
 })(jQuery);
