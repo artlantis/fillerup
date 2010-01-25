@@ -35,7 +35,7 @@ You can change the global defaults for all the options by modifying the jQuery.f
 $.extend($.fn.fillerup.defaults, {alignWith:'#col1', padding:100});
 }}}
 
-Then whenever you call fillerup, those defaults will be used unless you override them with new options.
+Then whenever you call fillerup, those defaults will be used unless you override them with new options. After setting the defaults above, the following example would use the default alignWith option, but override the default padding:
 
 {{{
 $('col2').fillerup({content:'<p>More stuff...</p>', padding:200});
