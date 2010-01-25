@@ -7,7 +7,7 @@ $(column2).fillerup(options);
 
 *column2* (selector) The column(s) where you want to insert more content.
 
-== Option Parameters ==
+=Option Parameters=
 
 *alignWith* (selector, jQuery object, or DOM element) The column (column1) that you are measuring against.
 
@@ -17,7 +17,7 @@ $(column2).fillerup(options);
 
 *padding* (int) Minimum difference between the height of column1 and column2. For example, for padding:100, if column1 is 100px taller than column2, then more content will be added. But if column1 is only 99px taller than column2, no additional content will be added.
 
-===content:fn(options)===
+==content:fn(options)==
 
 When you use a function as your content, fillerup calls your function and passes a single options argument containing all the fillerup options above, plus one additional options parameter:
 
@@ -26,3 +26,17 @@ When you use a function as your content, fillerup calls your function and passes
 Within your function the keyword "this" refers to the element where you should add the content.
 
 The function should return true to check the size and call the function again if necessary, or false to stop calling the function. When using ajax to asynchronously fetch content, the function should _always_ return false - then in your ajax callback you can call fillerup again (using the same options) to continue loading more content if necessary.
+
+==Changing the Defaults==
+
+You can change the global defaults for all the options by modifying the jQuery.fn.fillerup.defaults object. For example:
+
+{{{
+$.extend($.fn.fillerup.defaults, {alignWith:'#col1', padding:100});
+}}}
+
+Then whenever you call fillerup, those defaults will be used unless you override them with new options.
+
+{{{
+$('col2').fillerup({content:'<p>More stuff...</p>', padding:200});
+}}}
